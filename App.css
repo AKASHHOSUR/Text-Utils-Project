@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  transition: background-color 0.5s ease;
+}
+
+/* Home.css */
+
+/* Container for the buttons: use flex layout to wrap and center them */
+.buttons {
+  display: flex;             /* use flexbox for layout */
+  flex-wrap: wrap;           /* allow buttons to wrap to new lines */
+  gap: 10px;                 /* add spacing between buttons */
+  justify-content: center;   /* center buttons horizontally */
+  margin: 1rem 0;            /* vertical spacing around the button container */
+}
+
+/* General button styling */
+.buttons .btn {
+  flex: 1 1 150px;           /* allow buttons to grow/shrink, with a min width of 150px */
+  text-align: center;        /* center button text */
+  padding: 0.5rem 1rem;       /* add padding for better clickability */
+  font-size: 1rem;           /* set font size */
+  border: none;              /* remove default border */
+  border-radius: 5px;        /* add rounded corners */
+  background-color: #17a2b8; /* default background (Bootstrap Info color) */
+  color: #fff;               /* text color */
+  cursor: pointer;           /* show pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* smooth transition on hover/active */
+}
+
+/* Hover state: slightly darken and scale up the button */
+.buttons .btn:hover {
+  background-color: #138496;
+  transform: scale(1.05);
+}
+
+/* Active (pressed) state: scale down a bit */
+.buttons .btn:active {
+  transform: scale(0.95);
+}
+
+/* Interactive Textarea Styling with Scrolling */
+.interactive-textarea {
+  width: 100%;               /* Full width of container */
+  max-width: 100%;          /* Maximum width */
+  min-height: 150px;         /* Minimum height */
+  max-height: 300px;         /* Maximum height before scrolling */
+  padding: 15px;             /* Internal spacing for better readability */
+  font-size: 1rem;           /* Font size */
+  line-height: 1.5;          /* Comfortable line spacing */
+  border: 2px solid #ccc;    /* Light border */
+  border-radius: 8px;        /* Rounded corners */
+  background-color: #fff;    /* White background */
+  color: #333;               /* Dark text color */
+  resize: none;              /* Disable manual resizing */
+  overflow-y: hidden;        /* Initially hide vertical scrollbar */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect: change border color */
+.interactive-textarea:hover {
+  border-color: #17a2b8;
+}
+
+/* Focus effect: add glow and slight scale-up */
+.interactive-textarea:focus {
+  border-color: #17a2b8;
+  box-shadow: 0 0 10px rgba(23, 162, 184, 0.5);
+  transform: scale(1.02);
+  outline: none; /* Remove default outline */
+}
